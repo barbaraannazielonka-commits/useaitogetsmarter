@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Using AI to Learn More, Not Less · Oral Presentation Guide</title>
+<style>
+:root{--bg:#fbf8f3;--card:#fff;--ink:#1f2430;--mute:#5d6577;--line:#e6e0d6;--w:#d9480f;--wbg:#fff0e6;--r:#1c7ed6;--rbg:#e7f1fc;--f:#2f9e44;--fbg:#e9f7ec;--ac:#5f3dc4;--acbg:#efeafc;--warn:#c92a2a;--warnbg:#fdecec;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171d;--card:#1e222b;--ink:#eceef3;--mute:#a4abbb;--line:#323847;--w:#ff9f6b;--wbg:#3a2418;--r:#74b4ff;--rbg:#172a40;--f:#6fd786;--fbg:#173222;--ac:#b8a2ff;--acbg:#2a2342;--warn:#ff8787;--warnbg:#3a1c1c}}
+:root[data-theme="dark"]{--bg:#15171d;--card:#1e222b;--ink:#eceef3;--mute:#a4abbb;--line:#323847;--w:#ff9f6b;--wbg:#3a2418;--r:#74b4ff;--rbg:#172a40;--f:#6fd786;--fbg:#173222;--ac:#b8a2ff;--acbg:#2a2342;--warn:#ff8787;--warnbg:#3a1c1c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,nav,button,.tag,.lbl{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px;font-size:14px}
+nav a{white-space:nowrap;padding:6px 12px;border-radius:99px;color:var(--mute);text-decoration:none;font-weight:600}
+nav a:hover{background:var(--acbg);color:var(--ac)}
+main{max-width:860px;margin:0 auto;padding:0 18px 60px}
+section{padding:44px 0 8px}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.4em 0 .3em;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,4vw,2rem);margin:0 0 .3em;letter-spacing:-.01em}
+h3{margin:0 0 .3em;font-size:1.15rem}
+p{margin:.5em 0}.lead{font-size:1.2rem;color:var(--mute)}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);background:var(--acbg);padding:3px 10px;border-radius:99px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0}
+.test{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+@media(max-width:600px){.test{grid-template-columns:1fr}}
+.test div{border-radius:14px;padding:16px}.en{background:var(--fbg)}.by{background:var(--warnbg)}
+.step{border-left:6px solid var(--c);background:var(--card);border-radius:0 16px 16px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px;margin:18px 0}
+.step .lbl{display:inline-block;background:var(--cbg);color:var(--c);font-weight:800;padding:3px 12px;border-radius:99px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.s1{--c:var(--w);--cbg:var(--wbg)}.s2{--c:var(--r);--cbg:var(--rbg)}.s3{--c:var(--f);--cbg:var(--fbg)}
+ul,ol{padding-left:1.2em}li{margin:.3em 0}
+.prompt{background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:.95rem;position:relative}
+.prompt button{display:block;margin-top:8px}
+button{cursor:pointer;border:1px solid var(--ac);background:var(--acbg);color:var(--ac);font-weight:700;border-radius:99px;padding:6px 14px;font-size:13px}
+button:hover{background:var(--ac);color:var(--bg)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.vs{grid-template-columns:1fr}}
+.vs>div{border-radius:14px;padding:14px;font-size:.95rem}
+.lights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:700px){.lights{grid-template-columns:1fr}}
+.lights>div{border-radius:14px;padding:14px;font-size:.93rem}
+.g{background:var(--fbg)}.y{background:var(--wbg)}.rd{background:var(--warnbg)}
+.lights h3{font-size:1rem}.lights ul{margin:0}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
+th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:var(--acbg);font-family:system-ui,sans-serif}
+.chk label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;cursor:pointer}.chk input{margin-top:6px;width:18px;height:18px;accent-color:var(--ac)}
+.bar{height:10px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:0;background:var(--f);transition:width .3s}
+.hero{padding:36px 0 8px}
+a{color:var(--ac)}footer{border-top:1px solid var(--line);padding:24px 18px;text-align:center;color:var(--mute);font-size:.9rem}
+.raft-q{background:var(--acbg);border-radius:12px;padding:12px 16px;margin:12px 0 18px;font-family:system-ui,sans-serif}.raft-q b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+.rs{display:flex;gap:14px;align-items:flex-start;margin:14px 0}.rs .b{flex:none;width:42px;height:42px;border-radius:10px;color:#fff;font:800 1.4rem Georgia,serif;display:flex;align-items:center;justify-content:center}
+.rs h4{margin:0 0 2px;font:700 1.05rem system-ui,sans-serif}.rs p{margin:0;font-size:.97rem}
+.ref{padding-left:2em;text-indent:-2em;margin:0 0 6px;word-break:break-word}.use{font-family:system-ui,sans-serif;font-size:.88rem;color:var(--mute);margin:0}[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<nav>
+<a href="#why">Why</a><a href="#wrr">Wrestle · Rap · Reflect</a><a href="#raft">RAFT</a><a href="#plan">Your 5 steps</a><a href="#prompts">Prompts</a><a href="#check">Final check</a><a href="#references" id="tabref" style="margin-left:auto;background:var(--acbg);color:var(--ac)">📚 References</a>
+</nav>
+<main>
+<div id="guide">
+
+<header class="hero">
+<span class="tag">Oral Presentation · Autumn 2026</span>
+<h1>Use AI to get smarter, not just faster.</h1>
+<p class="lead">In our first graded assignment, you are allowed to use AI. But I want to show you how to use it so that you become smarter, not dumber. This guide walks you through two simple frameworks that help you use AI to strengthen your thinking, so you can feel proud of your presentation and confident when you deliver it.</p>
+</header>
+
+<section id="why">
+<h2>The one question that matters</h2>
+<p>Before you open any AI tool, ask yourself:</p>
+<div class="test">
+<div class="en"><h3>✅ Enhance</h3>AI helps me practise, test my understanding, and see what I missed. <strong>I</strong> still do the learning.</div>
+<div class="by"><h3>🚫 Bypass</h3>AI does the thinking and I copy the result. I finish the task but I haven't learned a thing.</div>
+</div>
+<div class="card">
+<h3>Why this matters for <em>this</em> task</h3>
+<p>On presentation day there is no AI in the room. You stand up, speak for up to 10 minutes, and answer questions about your own research question. If you only <em>pasted</em> your understanding from a chatbot, it will disappear the moment someone asks, <em>"Why do you say that?"</em></p>
+<p><strong>The goal:</strong> you finish this project able to explain your topic, your sources and your argument <em>without any screen open</em>.</p>
+<p><strong>And it goes further than this task.</strong> Learning isn't just finishing assignments. It means changing what you can understand and do, so that it stays with you. The presentation ends, but the skills don't: thinking first, asking better questions, checking what you're told, and explaining ideas in your own words. You'll use them in other subjects, in further studies and at work, and in everyday life when you have to judge information about your health, your money or the news. Anyone can get an answer from AI. What makes you capable is being able to understand it, question it and make it your own.</p>
+</div>
+<div class="card">
+<h3>Why your brain needs to do the work</h3>
+<p>Learning happens when your brain actively engages with new information. When you think, ask questions, connect ideas, solve problems, and learn from mistakes, you strengthen the neural connections that help you understand and remember. This is called productive cognitive effort: the mental work that helps you build knowledge and develop skills. It does not mean making learning unnecessarily difficult. Rather, it means giving your brain the opportunity to do the thinking required for learning.</p>
+<p>If you delegate every step to AI, you may produce an impressive presentation, but you miss out on much of the mental work that leads to genuine understanding. Over time, relying too heavily on AI may also contribute to what is increasingly referred to as cognitive debt: a situation in which repeated dependence on technology reduces opportunities to develop and maintain important thinking and problem-solving skills.</p>
+<p><strong>Use AI to support your thinking, not to do your thinking for you.</strong> Your goal is not simply to complete the task, but to become more knowledgeable, capable, and confident in your own abilities.</p>
+</div>
+<p>Two simple frameworks will help you do that.</p>
+</section>
+
+<section id="wrr">
+<span class="tag">Framework 1</span>
+<h2>Wrestle · Rap · Reflect</h2>
+<p>Created by Eric Curts. The order is the secret: <strong>you go first, AI goes second, and you get the last word.</strong></p>
+
+<div class="step s1">
+<span class="lbl">1 · Wrestle</span>
+<h3>Struggle with it yourself, without AI</h3>
+<p>Learning happens when your brain works hard. So start alone. It will feel messy. That's the point.</p>
+<p><strong>What you do for your presentation:</strong></p>
+<ul>
+<li>Write down what you already know about your topic (3–5 bullet points).</li>
+<li>Write <em>your own</em> first version of your research question, even if it's clumsy.</li>
+<li>Read at least one source yourself and write two sentences about what it says, in your own words.</li>
+<li>Write down what confuses you or what you can't figure out yet.</li>
+</ul>
+<p><strong>Rule:</strong> Don't open AI until you have something on the page. Your "Wrestle" notes go in your OneNote page.</p>
+</div>
+
+<div class="step s2">
+<span class="lbl">2 · Rap</span>
+<h3>Talk with AI like a coach, not a ghostwriter</h3>
+<p>"Rap" means a back-and-forth <em>conversation</em>. Now bring AI in to challenge, question and extend what you've already done.</p>
+<p><strong>Show AI your Wrestle notes and ask it to:</strong></p>
+<ul>
+<li>Ask <em>you</em> questions that reveal gaps in your thinking.</li>
+<li>Give you counterarguments to go and investigate.</li>
+<li>Explain a hard idea in simpler words (then <strong>you</strong> re-explain it back).</li>
+<li>Quiz you on your topic, one question at a time.</li>
+<li>Play your tough audience: ask the questions a classmate or teacher might ask.</li>
+</ul>
+<p><strong>Rule:</strong> Keep the conversation going. If you only send one message and copy the answer, that isn't a "rap," that's a shortcut.</p>
+</div>
+
+<div class="step s3">
+<span class="lbl">3 · Reflect</span>
+<h3>Decide what you actually learned and what you'll keep</h3>
+<p>AI can be wrong, biased, or too confident. Reflection is where <em>you</em> become the judge.</p>
+<ul>
+<li>What did AI help me understand that I didn't before?</li>
+<li>What did AI say that I'm not sure is true? How will I check it?</li>
+<li>What did I <em>not</em> use, and why?</li>
+<li>Can I now explain my topic <strong>out loud without looking</strong>? Try it for 60 seconds.</li>
+<li>What will I change in my presentation because of this?</li>
+</ul>
+<p><strong>Rule:</strong> Write your reflection in OneNote. It becomes your evidence that you did the thinking.</p>
+</div>
+</section>
+
+<section id="raft">
+<span class="tag">Framework 2</span>
+<h2>RAFT: Ethical AI Use</h2>
+<p>Created by Dr. Chase Cookson. RAFT helps you decide <strong>when AI helps, when it crosses the line</strong>, and how to keep your evidence, reasoning and voice yours.</p>
+
+<h3>Traffic lights for your presentation</h3>
+<div class="lights">
+<div class="g"><h3>🟢 Generally green</h3><ul>
+<li>Search terms to use <em>after</em> your own first attempt</li>
+<li>Practice questions from your notes</li>
+<li>Counterarguments to investigate</li>
+<li>Grammar check that keeps your voice</li></ul></div>
+<div class="y"><h3>🟡 Pause and check</h3><ul>
+<li>Summarising material you're expected to understand</li>
+<li>Rewriting your own work</li>
+<li>Translating or analysing data</li>
+<li>Anything where originality is graded</li></ul></div>
+<div class="rd"><h3>🔴 Generally stop</h3><ul>
+<li>Handing in AI-written work as yours</li>
+<li>Using citations or quotes you haven't verified</li>
+<li>Hiding AI use that isn't allowed</li>
+<li>Letting AI do the central thinking</li></ul></div>
+</div>
+
+<div class="card">
+<span class="tag">The RAFT Framework for Ethical AI Use</span>
+<h3 style="font-size:1.4rem;margin-top:10px">Use AI without outsourcing your learning</h3>
+<div class="raft-q"><b>The one question</b>Am I using AI to enhance my learning, or to bypass it?</div>
+<h4 style="font:700 1rem system-ui,sans-serif;margin:0 0 4px">Before you begin</h4>
+<ul style="margin-top:0"><li>What am I expected to learn or demonstrate?</li><li>What AI use is allowed for this assignment?</li><li>What have I already tried on my own?</li></ul>
+<h4 style="font:700 1rem system-ui,sans-serif;margin:18px 0 0">Work through RAFT</h4>
+<div class="rs"><div class="b" style="background:#0f766e">R</div><div><h4>Research Independently First</h4><p>Gather credible sources. Write down what you know, what you think, and what remains unclear before AI enters the process.</p></div></div>
+<div class="rs"><div class="b" style="background:#d99a1c">A</div><div><h4>Augment Your Work</h4><p>Ask AI for questions, gaps, counterarguments, feedback, or search directions. Ask for possibilities, not a finished submission.</p></div></div>
+<div class="rs"><div class="b" style="background:#b8402f">F</div><div><h4>Fact-Check Everything</h4><p>Find the original trustworthy source. Confirm the exact claim, quotation, date, calculation, and context. Remove what you cannot verify.</p></div></div>
+<div class="rs"><div class="b" style="background:#7b3f98">T</div><div><h4>Transform Into Your Own Work</h4><p>Close the AI output and build the final product from verified notes, course knowledge, your reasoning, and your voice.</p></div></div>
+<p style="font-family:system-ui,sans-serif;font-size:.85rem;color:var(--mute);margin:14px 0 0">Source: RAFT Framework for Ethical AI Use (Dr. Chase Cookson)</p>
+</div>
+
+<h3>The 60-second RAFT check</h3>
+<div class="card">
+<ol>
+<li><strong>Learning:</strong> Did I do the thinking this task is meant to assess?</li>
+<li><strong>Evidence:</strong> Can I verify every claim and every source?</li>
+<li><strong>Voice:</strong> Does this sound like me and reflect what I understand?</li>
+<li><strong>Transparency:</strong> Did I follow the AI-use rules and note where I used AI?</li>
+<li><strong>Defense:</strong> Could I explain this <em>without the AI tool open?</em></li>
+</ol>
+</div>
+<p>Use the check at three moments: <strong>before</strong> you ask AI, <strong>after</strong> you get an answer, and <strong>before</strong> you rehearse.</p>
+</section>
+
+<section id="plan">
+<h2>Putting it together: your 5 steps</h2>
+<p>Here's how the two frameworks fit into the steps of your task.</p>
+<div class="tbl"><table>
+<tr><th>Step in your task</th><th>Wrestle (alone)</th><th>Rap (with AI)</th><th>Reflect + RAFT</th></tr>
+<tr><td><strong>1. Choose topic</strong></td><td>List what you know and what you're curious about.</td><td>"Ask me questions to help me find an angle I care about." <em>Don't</em> ask it to pick for you.</td><td>Is this topic mine? Can I explain why I chose it?</td></tr>
+<tr><td><strong>2. Research question</strong></td><td>Draft your own question (or choose from the 22).</td><td>Ask AI to challenge it: too broad? too narrow? Is it arguable?</td><td>Rewrite it in your own words. Talk to your teacher.</td></tr>
+<tr><td><strong>3. Format &amp; plan</strong></td><td>Sketch your structure: hook, 3 key points, conclusion. Time it.</td><td>Ask for feedback on your logic and flow. Don't ask for a script.</td><td>Does the plan sound like me? Record it in OneNote.</td></tr>
+<tr><td><strong>4. Cite orally</strong></td><td>Write sentences using stems like "According to…".</td><td>Ask AI to check whether your stems are varied and your sources introduced clearly.</td><td>Say it aloud. Is your voice natural?</td></tr>
+<tr><td><strong>5. Research (5+ sources)</strong></td><td>Find and read sources yourself first.</td><td>Ask for search terms and opposing views. Then go find <em>real</em> sources.</td><td>Verify every source exists, is credible, and says what you claim. <strong>AI can invent sources.</strong></td></tr>
+<tr><td><strong>Rehearsal</strong></td><td>Practise out loud. Use the 10-minute timer.</td><td>"Be my audience. Ask 5 hard questions about my talk." Answer <em>out loud</em>.</td><td>Which questions stumped me? Go back and learn that part.</td></tr>
+</table></div>
+
+<div class="card" style="background:var(--warnbg);border-color:var(--warn)">
+<h3>⚠️ Important: AI makes up sources</h3>
+<p>You need <strong>5+ credible sources</strong>. AI sometimes invents articles, authors and statistics that sound completely real. Never put a source in your APA list (BibGuru) or say it aloud unless <strong>you</strong> have opened it and checked it.</p>
+</div>
+</section>
+
+<section id="prompts">
+<h2>Prompts that strengthen learning</h2>
+<p>A good prompt tells AI <strong>its job</strong> (coach) and <strong>what not to do</strong> (don't give me the answer). Tap to copy and replace [brackets].</p>
+
+<div class="vs">
+<div class="by"><strong>❌ Weakens learning</strong><br>"Write a 10-minute presentation about social media and mental health."</div>
+<div class="en"><strong>✅ Strengthens learning</strong><br>"Here's what I understand so far: […]. Ask me 3 questions that reveal gaps. Don't give me the answers yet."</div>
+</div>
+
+<div id="plist"></div>
+</section>
+
+<section id="check">
+<h2>Final check before you present</h2>
+<p>Tick each one honestly. This is for you.</p>
+<div class="card chk" id="chk">
+<label><input type="checkbox"> I did my own thinking first and my "Wrestle" notes are in OneNote.</label>
+<label><input type="checkbox"> I used AI as a coach: questions, feedback, practice, not as a writer.</label>
+<label><input type="checkbox"> I opened and verified every one of my 5+ sources.</label>
+<label><input type="checkbox"> My research question and words are my own.</label>
+<label><input type="checkbox"> I followed my teacher's AI rules and noted where I used AI.</label>
+<label><input type="checkbox"> I can explain my topic for 2 minutes with no notes and no screen.</label>
+<label><input type="checkbox"> I practised answering tough questions out loud.</label>
+<label><input type="checkbox"> I wrote a short Reflect entry in OneNote.</label>
+<div class="bar"><i id="bar"></i></div>
+<p id="msg" style="margin:8px 0 0;font-family:system-ui,sans-serif;font-weight:700"></p>
+</div>
+<p><strong>Remember:</strong> the best sign you've used AI well is that when it's closed, you still know your stuff. 💪</p>
+</section>
+</div>
+
+<div id="refs" hidden>
+<section id="references">
+<span class="tag">References</span>
+<h2>Sources behind this guide</h2>
+<p>These are the sources this guide is built on. Use them to read more, and notice how they are listed: this is APA format, the same style you need for your own reference list (<a href="https://www.bibguru.com/" target="_blank" rel="noopener">BibGuru</a> can build it for you).</p>
+<div class="card">
+<p class="ref">Cookson, C. (2026). <em>RAFT for ethical AI use</em>. RAFT Framework. <a href="https://raftframework.org/" target="_blank" rel="noopener">https://raftframework.org/</a></p>
+<p class="use">Used for: the RAFT framework (Research independently, Augment, Fact-check, Transform), the traffic lights and the 60-second check.</p>
+</div>
+<div class="card">
+<p class="ref">Dabbagh, N., &amp; Fake, H. (2026). Generative AI (GenAI) as a mindtool that supports generative learning (GL). <em>Computers and Education: Artificial Intelligence</em>. <a href="https://www.sciencedirect.com/science/article/pii/S2666920X26000883" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S2666920X26000883</a></p>
+<p class="use">Used for: the idea that AI works best as a "mindtool" that enhances and extends learning instead of replacing or short-circuiting it.</p>
+</div>
+<div class="card">
+<p class="ref">Guerra, M. (2026, May 13). <em>Generative AI: Cognitive debt, dependency, and critical thinking</em>. Observatory, Institute for the Future of Education, Tecnológico de Monterrey. <a href="https://observatory.tec.mx/edu-news/generative-ai-cognitive-debt-dependency-and-critical-thinking/" target="_blank" rel="noopener">https://observatory.tec.mx/edu-news/generative-ai-cognitive-debt-dependency-and-critical-thinking/</a></p>
+<p class="use">Used for: cognitive debt, cognitive dependence, and why AI can affect critical thinking.</p>
+</div>
+<div class="card">
+<p class="ref">Kosmyna, N., Hauptmann, E., Yuan, Y. T., Situ, J., Liao, X.-H., Beresnitzky, A. V., Braunstein, I., &amp; Maes, P. (2025, June 10). <em>Your brain on ChatGPT: Accumulation of cognitive debt when using an AI assistant for essay writing task</em>. MIT Media Lab. <a href="https://www.media.mit.edu/publications/your-brain-on-chatgpt/" target="_blank" rel="noopener">https://www.media.mit.edu/publications/your-brain-on-chatgpt/</a></p>
+<p class="use">Used for: the research study behind the idea of "cognitive debt" (an early, small study, so treat its findings as a starting point).</p>
+</div>
+<div class="card">
+<p class="ref">Stone, B. (2025, September 10). How does AI affect how we learn? A cognitive psychologist explains why you learn when the work is hard. <em>The Conversation</em>. <a href="https://theconversation.com/how-does-ai-affect-how-we-learn-a-cognitive-psychologist-explains-why-you-learn-when-the-work-is-hard-262863" target="_blank" rel="noopener">https://theconversation.com/how-does-ai-affect-how-we-learn-a-cognitive-psychologist-explains-why-you-learn-when-the-work-is-hard-262863</a></p>
+<p class="use">Used for: productive cognitive effort, and why mental struggle is how learning happens.</p>
+</div>
+</section>
+</div>
+</main>
+<footer>Frameworks: <em>Wrestle-Rap-Reflect</em> by Eric Curts · <a href="https://raftframework.org/students" target="_blank" rel="noopener">RAFT</a> by Dr. Chase Cookson.<br><strong>Nannestad High School – Barbara Anna Zielonka</strong></footer>
+
+<script>
+var P=[
+["Find gaps (after your Wrestle notes)","Here is what I understand about [topic] so far: [paste your notes]. Ask me 3 questions that will reveal gaps in my understanding. Do not give me the answers yet."],
+["Test my research question","This is my research question: [question]. Is it too broad, too narrow, or hard to answer in 10 minutes? Ask me questions to help me improve it. Do not rewrite it for me."],
+["Counterarguments","Give me two reasonable counterarguments to this claim: [claim]. Also give me search terms I can use to research each one. Do not write my argument for me."],
+["Quiz me","Quiz me on these notes one question at a time: [notes]. After I answer, tell me what is incomplete and ask me to try again."],
+["Check my reasoning","Point out places where my reasoning jumps too quickly in this explanation: [text]. Explain the issue, but do not rewrite it."],
+["Be my tough audience","Pretend you are a curious classmate listening to my 10-minute talk about [topic]. Ask me 5 challenging questions, one at a time, and wait for my answer."],
+["Explain, then I re-explain","Explain [concept] in simple words. Then ask me to explain it back in my own words and tell me what I got wrong or missed."]
+];
+var L=document.getElementById('plist');
+P.forEach(function(p,i){var d=document.createElement('div');d.className='prompt';
+d.innerHTML='<strong></strong><div></div><button type="button">Copy</button>';
+d.children[0].textContent=p[0];d.children[1].textContent=p[1];
+d.children[2].onclick=function(b){var t=p[1],btn=d.children[2];
+try{navigator.clipboard.writeText(t).then(function(){btn.textContent='Copied ✓'},function(){btn.textContent='Select & copy'})}catch(e){btn.textContent='Select & copy'}
+setTimeout(function(){btn.textContent='Copy'},1800)};L.appendChild(d)});
+var cs=document.querySelectorAll('#chk input');
+function up(){var n=0;cs.forEach(function(c){if(c.checked)n++});var pc=n/cs.length*100;
+document.getElementById('bar').style.width=pc+'%';
+document.getElementById('msg').textContent=n==cs.length?'You\'re ready. You used AI to learn. 🎉':n+' of '+cs.length+' done'}
+cs.forEach(function(c){c.onchange=up});up();
+var G=document.getElementById('guide'),R=document.getElementById('refs');
+document.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){
+if(a.id==='tabref'){G.hidden=true;R.hidden=false;window.scrollTo(0,0)}else{G.hidden=false;R.hidden=true}})});
+</script>
+</body>
+</html>
